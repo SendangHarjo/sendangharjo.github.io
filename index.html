@@ -2,9 +2,8 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="3; url=https://sendangharjo-bjn.desa.id/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mengarahkan ke Website Resmi Desa</title>
+    <title>Desa Sendangharjo - Bojonegoro</title>
     <style>
       body {
         background-color: #f0f4f8;
@@ -31,17 +30,38 @@
       a:hover {
         text-decoration: underline;
       }
+      #countdown {
+        font-size: 1.2rem;
+        color: #ff5722;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <div class="redirect-box">
       <h2>Anda akan diarahkan ke</h2>
+      <p><strong>Website Resmi Desa Sendangharjo</strong></p>
       <p>
-        <strong>Website Resmi Desa Sendangharjo</strong>
+        Jika tidak diarahkan otomatis, klik
+        <a href="https://sendangharjo-bjn.desa.id/">di sini</a>.
       </p>
-      <p>
-        Jika tidak diarahkan otomatis, klik <a href="https://sendangharjo-bjn.desa.id/">di sini</a>.
-      </p>
+      <p id="countdown">Mengalihkan dalam 3 detik...</p>
     </div>
+
+    <script>
+      let count = 3;
+      const countdownEl = document.getElementById('countdown');
+
+      const interval = setInterval(() => {
+        count--;
+        if (count > 0) {
+          countdownEl.textContent = `Mengalihkan dalam ${count} detik...`;
+        } else {
+          clearInterval(interval);
+          window.location.href = "https://sendangharjo-bjn.desa.id/";
+        }
+      }, 1000);
+    </script>
   </body>
 </html>
