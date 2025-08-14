@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /pagenotfound
-Disallow: /404
 Allow: /
 
-Sitemap: https://sendangharjo.github.io/tentang/sitemap.xml
+Sitemap: https://sendangharjo.github.io/sitemap.xml
+
