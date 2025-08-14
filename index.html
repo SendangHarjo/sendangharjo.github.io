@@ -62,26 +62,31 @@
   }
   </script>
 
-  <!-- Redirect -->
   <script>
-    setTimeout(function(){
-      window.location.href = "https://sendangharjo-bjn.desa.id/";
-    }, 1500); // 1,5 detik
+    document.addEventListener("DOMContentLoaded", function () {
+      var isBot = /Googlebot|Bingbot|Slurp|DuckDuckBot|Baiduspider|YandexBot/i.test(navigator.userAgent);
+      if (!isBot) {
+        setTimeout(function () {
+          window.location.href = "https://sendangharjo-bjn.desa.id/";
+        }, 2000);
+      }
+    });
   </script>
-  <meta http-equiv="refresh" content="4; url=https://sendangharjo-bjn.desa.id/">
 </head>
 
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
-  <div class="text-center">
+  <div class="text-center p-4">
     <img src="https://sendangharjo.github.io/kkm-logo.png" alt="KKM 2025 - IKIP PGRI Bojonegoro - Desa Sendangharjo" class="mb-4" style="max-width:120px;">
-    <h2 class="mb-3">Sedang Mengalihkan...</h2>
+    <h2 class="mb-3">Website Resmi Desa Sendangharjo</h2>
     <p class="mb-4">
-      Halaman ini adalah portal resmi digitalisasi 
-      <strong>Desa Sendangharjo, Ngasem, Bojonegoro</strong>.  
-      Anda sedang dialihkan ke situs utama:  
+      Halaman ini adalah portal resmi digitalisasi <strong>Desa Sendangharjo, Ngasem, Bojonegoro</strong>.
+      Proyek <strong>KKM 2025 IKIP PGRI Bojonegoro</strong> memadukan teknologi dan kearifan lokal
+      untuk mewujudkan <em>desa cerdas</em>.  
+      <br><br>
+      Anda akan dialihkan otomatis ke:
       <a href="https://sendangharjo-bjn.desa.id/" class="fw-bold text-decoration-none">
-        Desa Sendangharjo
-      </a>.
+        sendangharjo-bjn.desa.id
+      </a>
     </p>
     <div class="spinner-border text-success" role="status">
       <span class="visually-hidden">Loading...</span>
